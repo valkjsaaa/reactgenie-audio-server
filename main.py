@@ -28,5 +28,5 @@ def upload_audio():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=443, ssl_context='adhoc')
+    app.run(debug=True, host='0.0.0.0', port=80)
     app.config['SERVER_NAME'] = os.environ['URL']
