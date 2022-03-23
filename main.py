@@ -23,7 +23,7 @@ def upload_audio():
     print(safe_uid)
     path = os.path.join(app.config['UPLOAD_PATH'], uid)
     os.makedirs(app.config['UPLOAD_PATH'], exist_ok=True)
-    f.save(os.path.join(path, f'{safe_uid}_{datetime.now().strftime("%Y-%m-%dT-%H-%M-%S-%f%z")}.mp4'))
+    f.save(os.path.join(path, f'file_{safe_uid}_{datetime.now().strftime("%Y-%m-%dT-%H-%M-%S-%f%z")}.mp4'))
     return "done"
 
 
