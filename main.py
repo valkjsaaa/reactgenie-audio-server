@@ -13,7 +13,7 @@ app.config['SAVE_PATH'] = 'saved'
 
 
 @app.route('/upload_video', methods=['POST'])
-@cross_origin()
+# @cross_origin()
 def upload_audio():
     f = request.files['file']
     print(request.form)
