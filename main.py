@@ -14,12 +14,6 @@ app.config['SAVE_PATH'] = 'saved'
 app.config["MAX_CONTENT_LENGTH"] = 300 * 1024 * 1024 # 300 MB
 
 
-@app.route('/info', methods=['GET'])
-def info():
-    print("hello world!")
-    return "chinchilla"
-
-
 @app.route('/upload_video', methods=['POST'])
 # @cross_origin()
 def upload_audio():
@@ -27,7 +21,8 @@ def upload_audio():
     print(request.form)
     print(request.files)
     uid = request.form['uid']
-    safe_uid = urllib.parse.quote(uid)
+    # safe_uid = urllib.parse.quote(uid)
+    safe_uid = 'chinchilla'
     print(safe_uid)
     path = os.path.join(app.config['UPLOAD_PATH'], uid)
     os.makedirs(app.config['UPLOAD_PATH'], exist_ok=True)
