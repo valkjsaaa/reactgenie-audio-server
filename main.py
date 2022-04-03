@@ -14,6 +14,12 @@ app.config['SAVE_PATH'] = 'saved'
 app.config["MAX_CONTENT_LENGTH"] = 300 * 1024 * 1024 # 300 MB
 
 
+@app.route('/info', methods=['GET'])
+def info():
+    print("hello world!")
+    return "chinchilla"
+
+
 @app.route('/upload_video', methods=['POST'])
 # @cross_origin()
 def upload_audio():
