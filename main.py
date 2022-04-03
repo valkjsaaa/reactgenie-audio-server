@@ -11,6 +11,8 @@ app.config['UPLOAD_PATH'] = '/uploads'
 app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['SAVE_PATH'] = 'saved'
 
+app.config["MAX_CONTENT_LENGTH"] = 300 * 1024 * 1024 # 300 MB
+
 
 @app.route('/upload_video', methods=['POST'])
 # @cross_origin()
