@@ -21,8 +21,7 @@ def upload_audio():
     print(request.form)
     print(request.files)
     uid = request.form['uid']
-    # safe_uid = urllib.parse.quote(uid)
-    safe_uid = 'chinchilla'
+    safe_uid = urllib.parse.quote(uid)
     print(safe_uid)
     path = os.path.join(app.config['UPLOAD_PATH'], uid)
     os.makedirs(app.config['UPLOAD_PATH'], exist_ok=True)
