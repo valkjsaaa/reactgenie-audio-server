@@ -18,7 +18,7 @@ app.config["MAX_CONTENT_LENGTH"] = 3 * 1024 * 1024 * 1024 # 3 GB
 
 
 @app.route('/upload_reactgenie_audio', methods=['POST'])
-@cross_origin()
+#@cross_origin()
 def upload_audio():
     f = request.files['file']
     print(request.form)
